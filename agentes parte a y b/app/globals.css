@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+:root {
+  --color-bg-primary:        #0a0e17;
+  --color-bg-container:      #111927;
+  --color-bg-input:          #0d1421;
+
+  --color-text-primary:      #e0f2ff;
+  --color-text-secondary:    #94a3b8;
+  --color-text-muted:        #64748b;
+
+  --color-accent-blue:       #00d4ff;
+  --color-accent-gold:       #ffb547;
+  --color-accent-green:      #00ff9d;
+
+  --color-border-subtle:     #1e293b80;
+  --color-border-focus:      #00d4ff;
+
+  --color-error:             #ff4d4f;
+  --color-success:           #00ff9d;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-bg-primary:      #f8fafc;
+    --color-bg-container:    #ffffff;
+    --color-text-primary:    #0f172a;
+    --color-text-secondary:  #475569;s
+    --color-border-subtle:   #e2e8f0;
+  }
+}
+
+@theme inline {
+  --color-bg-primary:        var(--color-bg-primary);
+  --color-bg-container:      var(--color-bg-container);
+  --color-bg-input:          var(--color-bg-input);
+
+  --color-text-primary:      var(--color-text-primary);
+  --color-text-secondary:    var(--color-text-secondary);
+  --color-text-muted:        var(--color-text-muted);
+
+  --color-accent-blue:       var(--color-accent-blue);
+  --color-accent-gold:       var(--color-accent-gold);
+  --color-accent-green:      var(--color-accent-green);
+
+  --color-border-subtle:     var(--color-border-subtle);
+  --color-border-focus:      var(--color-border-focus);
+
+  --color-error:             var(--color-error);
+  --color-success:           var(--color-success);
+
+  --font-sans: ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono", "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+html, body, #__next {
+  height: 100%;
+  margin:0;
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent-blue);
+}
+
+.ai-message-bubble {
+  @apply
